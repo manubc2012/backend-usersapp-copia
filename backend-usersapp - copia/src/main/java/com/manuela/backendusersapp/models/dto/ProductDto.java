@@ -9,8 +9,7 @@ public class ProductDto {
 
     private String categoria;
 
-    public ProductDto() {
-    }
+
 
     public ProductDto(Long id, String name, String precio, String descripcion, String categoria) {
         this.id = id;

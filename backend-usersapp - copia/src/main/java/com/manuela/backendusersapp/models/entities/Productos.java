@@ -2,6 +2,7 @@ package com.manuela.backendusersapp.models.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -11,12 +12,13 @@ public class Productos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+    @NotEmpty
     @Size(min = 5)
     @Column(unique = true)
     private String name;
 
     @NotBlank
+    @Size(min = 4)
     private String precio;
 
     @NotBlank

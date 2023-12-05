@@ -2,15 +2,17 @@ package com.manuela.backendusersapp.models.Request;
 
 import javax.persistence.Column;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class ProductsRequest {
-    @NotBlank
+    @NotEmpty
     @Size(min = 5)
     @Column(unique = true)
     private String name;
 
     @NotBlank
+    @Size(min = 4)
     private String precio;
 
     @NotBlank
